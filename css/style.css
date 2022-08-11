@@ -404,7 +404,7 @@ header {
 .Skill_wrap input[id=stab_02]:checked ~ .Skill_tabs {
   margin-left: -100%;
 }
-.Skilll_wrap input[id=stab_03]:checked ~ .Skill_tabs {
+.Skill_wrap input[id=stab_03]:checked ~ .Skill_tabs {
   margin-left: -200%;
 }
 
