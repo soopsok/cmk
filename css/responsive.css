@@ -1,0 +1,267 @@
+  @media (max-width: 768px) {
+  /* 슬라이딩 스크롤 */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Layout */
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+  }
+  .container {
+    position: static;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  /* go to top */
+  .gototop {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .gototop.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Contact Button */
+  .btn_contact {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  /* header */
+  header {
+    transition: 0.5s;
+    z-index: 100;
+  }
+  header.active {
+    background-color: #fff;
+    /* height: 60px; */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.08);
+  }
+  .gnb_wrap {
+    /* height: 100px; */
+  }
+  .logo {
+    width: 130px;
+    margin-top: 7px;
+  }
+  .gnb {
+    width: 250px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    height: 100vh;
+    box-shadow: -3px 0 8px rgba(0,0,0,0.1);
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .menu {
+    display: block;
+    padding: 70px 20px 0 0;
+    text-align: right;
+  }
+  .menu a {
+    display: block;
+    font-size: 18px;
+    line-height: 42px;
+    color: #EC407A;
+  }
+  .slogan {
+    display: none;
+  }
+  .trigger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+  }
+  .trigger span {
+    width: 100%;
+    height: 2px;
+    background-color: #7F8C8D;
+    position: absolute;
+    transition: 0.5s;
+    text-align: right;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+    left: auto;
+    right: 0;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    display: none;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  
+
+  /* ================== Home Section ================== */
+  .home_wrap {
+    height: 100vh;
+  }
+  .welcome_text {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  .main_img {
+    background: url(../images/mobile_bg.jpg) no-repeat center right ;
+  }
+  .main_copy {
+    left: 50px;
+  }
+  .main_copy p {
+    font-size: 50px;
+  }
+  .main_copy {
+    transform: translateY(-30%);
+  }
+
+  /* ================= Vedio Section ================= */
+  .vedio_wrap {
+    height: 100vh;
+    padding: 0 20px;
+  }
+  .tit_wrap {
+    position: static;
+  }
+  .tit_wrap h2 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+  .tit_wrap h2::after {
+    width: 80px;
+    top: 70px;
+  }
+  .tit_wrap  p {
+    font-size: 18px;
+  }
+  .debut iframe {
+    width: 320px;
+    height: 240px;
+  }
+
+  /* ================== skill Section ================== */
+  .Skill_wrap {
+    border: none;
+    height: auto;
+  }
+  .Skill_tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Skill_tab {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Skill_desc {
+    padding: 20px;
+    width: 100%;
+  }
+  .Skill_desc:before {
+    font-size: 120px;
+    left: 0;
+  }
+  .Skill_desc h2 {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+  .filmography {
+    font-size: 14px;
+  }
+  .Skill_photo {
+    width: 100%;
+  }
+  .Skill_btn {
+    display: none;
+  }
+
+  /* ================= Award Section ================= */
+  .Award_wrap {
+    height: 100vh;
+    padding: 20px;
+  }
+  .Award_cont {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Award h2,
+  .Career h2 {
+    font-size: 28px;
+  }
+  .Award .fa {
+    font-size: 60px;
+  }
+  .Award ul li, .Career ul li {
+    font-size: 16px;
+  }
+  .Career {
+    margin-top: 20px;
+  }
+  .Career .fa {
+    font-size: 60px;
+  }
+  /* ================= Contact Section ================= */
+  .contact_wrap {
+    height: 100vh;
+  }
+  .contact_cont {
+    /* position: static; */
+    text-align: center;
+  }
+  .contact_cont > div {
+    float: none;
+  }
+  .contact_title {
+    margin-right: 0;
+  }
+  .contact_desc p {
+    margin-top: 30px;
+  }
+  .contact_desc p:before {
+    display: none;
+  }
+
+
+
+
+
+
+
+}

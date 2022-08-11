@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prototype with flex</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+    .skill_wrap {
+      height: 100%;
+      border: 5px solid #000;
+      overflow: hidden;
+    }
+    .skill_wrap input[name=stabmenu] {
+      display: none;
+    }
+    .skill_tabs {
+      height: 100%;
+      width: 300%;
+      border: 5px solid red;
+      display: flex;
+      transition: 0.5s;
+    }
+    .skill_tab {
+      width: 100%;
+      height: 100%;
+      border: 5px solid blue;
+      display: flex;
+    }
+    .skill_tab > div{
+      border: 1px solid #000;
+    }
+    .skill_desc {
+      width: 35%;
+    }
+    .skill_photo {
+      width: 65%;
+    }
+    .skill_btn {
+      width: 35%;
+      text-align: center;
+      position: absolute;
+      bottom: 50px;
+      font-size: 16px;
+    }
+    .skill_btn label {
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+      line-height: 18px;
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+    .skill_wrap input[id=stab_01]:checked ~ .skill_btn label[for=stab_01] {
+      color: dodgerblue;
+    }
+    .skill_wrap input[id=stab_02]:checked ~ .skill_btn label[for=stab_02] {
+      color: dodgerblue;
+    }
+    .skill_wrap input[id=stab_03]:checked ~ .skill_btn label[for=stab_03] {
+      color: dodgerblue;
+    }
+    .skill_wrap input[id=stab_01]:checked ~ .skill_tabs {
+      margin-left: 0;
+    }
+    .skill_wrap input[id=stab_02]:checked ~ .skill_tabs {
+      margin-left: -100%;
+    }
+    .skill_wrap input[id=stab_03]:checked ~ .skill_tabs {
+      margin-left: -200%;
+    }
+  </style>
+</head>
+<body>
+  <div class="skill_wrap">
+    <input type="radio" name="stabmenu" id="stab_01" checked>
+    <input type="radio" name="stabmenu" id="stab_02">
+    <input type="radio" name="stabmenu" id="stab_03">
+    <div class="skill_tabs">
+      <div class="skill_tab">
+        <div class="skill_desc">skill_desc1</div>
+        <div class="skill_photo">skill_photo1</div>
+      </div>
+      <div class="skill_tab">
+        <div class="skill_desc">skill_desc2</div>
+        <div class="skill_photo">skill_photo2</div>
+      </div>
+      <div class="skill_tab">
+        <div class="skill_desc">skill_desc3</div>
+        <div class="skill_photo">skill_photo3</div>
+      </div>
+    </div>
+    <div class="skill_btn">
+      <label for="stab_01">Narration</label>
+      <label for="stab_02">Actor</label>
+      <label for="stab_03">Announcer</label>
+    </div>
+  </div>
+</body>
+</html>

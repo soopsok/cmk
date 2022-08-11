@@ -1,0 +1,60 @@
+데모 및 다운로드 사이트 : https://codyhouse.co/gem/page-scroll-effects
+
+페이지 스크롤이 너무 느리게 셋팅이 되어 있다.
+--> main.js 에서 scrollThreshold = 5, 로 되어 있는 부분을 1로 바꿔준다.
+
+velocity.css 에서
+.cd-section 에 nth-of-type 로 된 배경색 모두 삭제
+
+.cd-section h2 {
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2.4rem;
+}
+요 윗부분 ▲ 삭제하고 시작하기
+
+메인 애니매이션 할때, 일단 각각 레이아웃을 먼저 잡고, display: none 로 해서 안보이게 한 다음
+순차적으로 애니매이션 적용 할 것.
+
+animation : slideup(키프레임 이름) 3s(지속시간) 0s(딜레이시간) linear(직선) ease-in-out(부드러운동작) infinte(무한반복) both(멈춤) ;
+animation-fill-mode : both;
+
+
+<body data-hijacking="on" data-animation="rotate">
+바디부분 data-hijacking="on" 이글 끄고 작업한다
+
+
+input type radio 를 이용해서 탭을 만들때는 형제선택자를 이용해야 하므로(위로는 선택 불가)
+input의 위치는 탭이 위치한 div와 동일한 위치에 있어야 한다.
+input과 label을 페어링 시킬때는 input의 id와 label의 for 속성과 속성값을 페어링 시킨다.
+
+input 태그를 선택 할때는 속성선택자로 선택을 한다.
+
+Label은 인라인요소 input, button, textarea 등의 form 요소들은 인라인블럭 요소다.
+
+data-text="01" 사용자 정의 텍스트
+불러올때는 attr(data-text)  <--  이 부분을 content: attr(data-text);  이렇게 적어준다.
+
+같은 위치에 겹치는 컨텐츠가 있으면 position 속성을 가진 컨텐츠가 위로 올라오게 된다.
+이런 경우 포지션 속성이 없는 컨텐츠에 position: relative 를 주어서 위로 올라오게 만들면 해결이 된다.
+
+프로토타입을 만들때 바디에 높이값을 주지 않으면 비어있는 DIV들의 높이를 알 수 없으므로
+우선 height : 100vh; 로 주고 시작하는 것이 편하다.
+
+before, after은 인라인 요소.
+크기값을 가질 수가 없다.
+
+아래에 줄 복사 : Ctrl + D
+줄 삭제 : Ctrl + Shift+ D
+줄 아래로 이동 : Ctrl + Shift+ 아래 방향키
+줄 위로 이동 : Ctrl + Shift+ 위 방향키
+
+
+Life's greatest happiness is to be convinced we are loved. 인생에 있어서 최고의 행복은 우리가 사랑받고 있음을 확신하는 것이다.
+The gratification comes in the doing, not in the results. 만족은 결과가 아니라 과정에서 온다.
+
+모바일 변환시 중요한 부분
+- 메인은 그냥 두고, 나머지는 hight: 100vh 를 height: auto;로 변경해 주어야 한다.
+- position: absolute; 를 position: static; 로 변경
+- width: 100%; 로 변경
+- flot: left; 를 float:none;로 변경

@@ -1,0 +1,245 @@
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* 나눔스퀘어 라운드 */
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  /* font-weight: normal; */
+  /* font-style: normal; */
+  }
+
+/* reset */
+* {box-sizing: border-box;}
+ul {list-style: none;}
+a {
+  color: #222;
+  text-decoration: none;
+}
+button, input {
+  border: none;
+  outline: none;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.45em;
+}
+
+/* common */
+body {
+  font-family: 'NanumSquareRound';
+  /* line-height: 1.5em; */
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+}
+.cd-section h2 {
+  color: #fff;
+}
+
+/* Layout */
+
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.container {
+  position: absolute;
+  background-color: #eee;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+/* go to top */
+.gototop {
+  display: none;
+}
+
+/* Contact Button */
+.btn_contact {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  color: #fff;
+  padding: 7px 15px;
+  background-color: #F94877;
+  border-radius: 30px;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
+  transition: 0.5s;
+}
+.btn_contact:active {
+  transform: scale(0);
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.gnb_wrap {
+  overflow: hidden;
+  margin: auto;
+  width: calc(100% - 40px);
+  height: 60px;
+  line-height: 60px;
+}
+.logo {
+  float: left;
+  width: 200px;
+  padding-top: 12px;
+}
+.logo a img {
+  display: block;
+}
+.gnb {
+  float: right;
+}
+.menu {display: none;}
+.slogan {
+  color: #9E9E9E;
+  font-size: 17px;
+  font-weight: 200;
+  font-style: italic;
+}
+.trigger {
+  display: none;
+}
+
+/* Home Section */
+.home_wrap {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.home_wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  animation: curtain 1s 2s ease-in-out both;
+  /* display: none; */
+}
+.welcome_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  animation: slideup 2s 0s linear both;
+  /* display: none; */
+}
+.welcome_text span {
+  display: block;
+  font-size: 26px;
+  color: #888;
+}
+.heart {
+  color: #F94877;
+}
+.main_img {
+  width: 100%;
+  height: 100%;
+  background: url(../images/home_bg_01.jpg) no-repeat center center ;
+  background-size: cover;
+  /* display: none; */
+  animation: bgimg 1s 2.8s both;
+}
+.main_copy {
+  position: absolute;
+  top: 50%;
+  left: 230px;
+  transform: translateY(-50%);
+}
+.main_copy p {
+  margin: 0;
+  font-size: 110px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  width: 0;
+  overflow: hidden;
+  animation: headline 1s 3.8s ease-in-out both;
+  /* display: none; */
+}
+.main_copy p:nth-child(1) {
+  animation-delay: 3.8s;
+}
+.main_copy p:nth-child(2) {
+  color: #FFECB3;
+  animation-delay: 4.2s;
+  font-size: 90px;
+}
+.main_copy p:nth-child(3) {  
+  animation-delay: 4.6s;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes curtain {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes bgimg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes headline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

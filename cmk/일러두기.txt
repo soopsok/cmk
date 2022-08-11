@@ -1,0 +1,45 @@
+데모 및 다운로드 사이트 : https://codyhouse.co/gem/page-scroll-effects
+
+페이지 스크롤이 너무 느리게 셋팅이 되어 있다.
+--> main.js 에서 scrollThreshold = 5, 로 되어 있는 부분을 1로 바꿔준다.
+
+velocity.css 에서
+.cd-section 에 nth-of-type 로 된 배경색 모두 삭제
+
+.cd-section h2 {
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2.4rem;
+}
+요 윗부분 ▲ 삭제하고 시작하기
+
+메인 애니매이션 할때, 일단 각각 레이아웃을 먼저 잡고, display: none 로 해서 안보이게 한 다음
+순차적으로 애니매이션 적용 할 것.
+
+animation : slideup(키프레임 이름) 3s(지속시간) 0s(딜레이시간) linear(직선) ease-in-out(부드러운동작) infinte(무한반복) both(멈춤) ;
+animation-fill-mode : both;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+아래에 줄 복사 : Ctrl + D
+줄 삭제 : Ctrl + Shift+ D
+줄 아래로 이동 : Ctrl + Shift+ 아래 방향키
+줄 위로 이동 : Ctrl + Shift+ 위 방향키
+
+
+Life's greatest happiness is to be convinced we are loved. 인생에 있어서 최고의 행복은 우리가 사랑받고 있음을 확신하는 것이다.
+The gratification comes in the doing, not in the results. 만족은 결과가 아니라 과정에서 온다.

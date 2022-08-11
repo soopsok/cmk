@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prototype</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+    .skill_wrap {
+      height: 100%;
+      overflow: hidden;
+    }
+    .skill_wrap input[name=s_tabmenu] {
+      display: none;
+    }
+    .skill_wrap input[id=stab_01]:checked ~ .stab_btn label[for=stab_01],
+    .skill_wrap input[id=stab_02]:checked ~ .stab_btn label[for=stab_02],
+    .skill_wrap input[id=stab_03]:checked ~ .stab_btn label[for=stab_03] {
+      color: #CDDC39;
+    }
+    .skill_wrap input[id=stab_01]:checked ~ .tabs {
+      margin-left: 0;
+    }
+    .skill_wrap input[id=stab_02]:checked ~ .tabs {
+      margin-left: -100%;
+    }
+    .skill_wrap input[id=stab_03]:checked ~ .tabs {
+      margin-left: -200%;
+    }
+
+    .tabs {
+      height: 100%;
+      width: 300%;
+      transition: 0.5s;
+    }
+    .tabs > div {
+      float: left;
+      width: 33.3333%;
+    }
+    .tab {
+      height: 100%;
+      color: #fff;
+    }
+    .tab > div {
+      float: left;
+      /* border: 1px solid #000; */
+      height: 100%;
+      padding: 30px;
+    }
+    .skill_desc {
+      width: 35%;
+    }
+    .skill_photo {
+      width: 65%;
+    }
+    .twitter {background-color: #1DA1F2;}
+    .facebook {background-color: #1877F2;}
+    .slideshare {background-color: #0077B5;}
+    .wordpress {background-color: #21759B;}
+    .foursquare {background-color: #F94877;}
+    .tiktok {background-color: #EE1D51;}
+    .stab_btn {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 50px;
+      color: #fff;
+    }
+    .stab_btn label {
+      margin: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="skill_wrap">
+    <input type="radio" name="s_tabmenu" id="stab_01" checked>
+    <input type="radio" name="s_tabmenu" id="stab_02">
+    <input type="radio" name="s_tabmenu" id="stab_03">
+    <div class="tabs">
+      <div class="tab">
+        <div class="skill_desc twitter">skill_desc1</div>
+        <div class="skill_photo facebook">skill_photo1</div>
+      </div>
+      <div class="tab">
+        <div class="skill_desc slideshare">skill_desc2</div>
+        <div class="skill_photo wordpress">skill_photo2</div>
+      </div>
+      <div class="tab">
+        <div class="skill_desc foursquare">skill_desc3</div>
+        <div class="skill_photo tiktok">skill_photo3</div>
+      </div>
+    </div>
+    <div class="stab_btn">
+      <label for="stab_01">Blue</label>
+      <label for="stab_02">Dark Blue</label>
+      <label for="stab_03">Red</label>
+    </div>
+  </div>
+</body>
+</html>

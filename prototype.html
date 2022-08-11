@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>prototype</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+    .skill_wrap {
+      height: 100%;
+      border: 5px solid red;
+      overflow: hidden;
+    }
+    .tabs {
+      border: 5px solid yellow;
+      height: 100%;
+      width: 200%;
+      transition: 0.5s
+    }
+    .tab {
+      border: 5px solid blue;
+      width: 50%;
+      height: 100%;
+      float: left;
+    }
+    .tab div {
+      float: left;
+      height: 100%;
+    }
+    .skill_desc {
+      width: 40%;
+      border: 1px solid #000;
+    }
+    .skill_photo {
+      width: 60%;
+      border: 1px solid #000;
+    }
+    .skill_btn {
+      position: absolute;
+      left: 0px;
+      bottom: 50px;
+      width: 40%;
+      text-align: center;
+    }
+    .skill_btn label {
+      margin: 10px;
+      cursor: pointer
+    }
+    .skill_wrap input[name=tabmenu] {
+      display: none;
+    }
+    .skill_wrap input[id=tab1]:checked ~ .skill_btn label[for=tab1] {
+      color: red;
+    }
+    .skill_wrap input[id=tab2]:checked ~ .skill_btn label[for=tab2] {
+      color: red;
+    }
+    .skill_wrap input[id=tab1]:checked ~ .tabs {
+      margin-left: 0;
+    }
+    .skill_wrap input[id=tab2]:checked ~ .tabs {
+      margin-left: -100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="skill_wrap">
+    <input type="radio" name="tabmenu" id="tab1" checked>
+    <input type="radio" name="tabmenu" id="tab2">
+    <div class="tabs">
+      <div class="tab">
+        <div class="skill_desc">skill_desc1</div>
+        <div class="skill_photo">skill_photo1</div>
+      </div>
+      <div class="tab">
+        <div class="skill_desc">skill_desc2</div>
+        <div class="skill_photo">skill_photo2</div>
+      </div>
+    </div>
+    <div class="skill_btn">
+      <label for="tab1">Actor</label>
+      <label for="tab2">Announcer</label>
+    </div>
+  </div>
+</body>
+</html>

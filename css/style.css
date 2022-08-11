@@ -1,0 +1,589 @@
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* 나눔스퀘어 라운드 */
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  /* font-weight: normal; */
+  /* font-style: normal; */
+  }
+
+/* reset */
+* {box-sizing: border-box;}
+ul {
+  list-style: none;
+  padding: 0
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+button, input {
+  border: none;
+  outline: none;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.45em;
+}
+
+/* common */
+body {
+  font-family: 'NanumSquareRound';
+  /* line-height: 1.5em; */
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+}
+/*
+.cd-section h2 {
+  color: #fff;
+}
+*/
+
+/* Layout */
+
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.container {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+/* go to top */
+.gototop {
+  display: none;
+}
+
+/* Contact Button */
+/* .btn_contact {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  color: #fff;
+  padding: 7px 15px;
+  background-color: #F94877;
+  border-radius: 30px;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
+  transition: 0.5s;
+} */
+/*
+.btn_contact:active {
+  transform: scale(0);
+}
+*/
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.gnb_wrap {
+  overflow: hidden;
+  margin: auto;
+  width: calc(100% - 40px);
+  height: 60px;
+  line-height: 60px;
+}
+.logo {
+  float: left;
+  width: 160px;
+  padding-top: 15px;
+}
+.logo a img {
+  display: block;
+}
+.gnb {
+  float: right;
+}
+.menu {display: none;}
+.slogan {
+  color: #9E9E9E;
+  font-size: 17px;
+  font-weight: 200;
+  font-style: italic;
+}
+.trigger {
+  display: none;
+}
+/* ================== Home Section ================== */
+.home_wrap {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.home_wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  animation: curtain 1s 2s ease-in-out both;
+  /* display: none; */
+}
+.welcome_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  animation: slideup 2s 0s linear both;
+  /* display: none; */
+}
+.welcome_text span {
+  display: block;
+  font-size: 26px;
+  color: #888;
+}
+.heart {
+  color: #F94877;
+}
+.main_img {
+  width: 100%;
+  height: 100%;
+  background: url(../images/home_bg.jpg) no-repeat center center ;
+  background-size: cover;
+  /* display: none; */
+  animation: bgimg 1s 2.8s both;
+}
+.main_copy {
+  position: absolute;
+  top: 50%;
+  left: 210px;
+  transform: translateY(-50%);
+}
+.main_copy p {
+  margin: 0;
+  font-size: 116px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.28em;
+  width: 0;
+  overflow: hidden;
+  animation: headline 1s 3.8s ease-in-out both;
+  white-space: nowrap;
+  /* display: none; */
+}
+.main_copy p:nth-child(1) {
+  animation-delay: 3.8s;
+}
+.main_copy p:nth-child(2) {
+  animation-delay: 4.2s;
+}
+.main_copy p:nth-child(3) {  
+  animation-delay: 4.6s;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes curtain {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes bgimg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes headline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* ================== Vedio Section ================== */
+.vedio_wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.tit_wrap {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.tit_wrap h2 {
+  font-size: 40px;
+  color: #0099FF;
+  font-weight: 700;
+  position: relative;
+}
+.tit_wrap h2::after {
+  content: '';
+  width: 120px;
+  height: 4px;
+  background-color: #0077B5;
+  position: absolute;
+  top: 67px;
+  left: 0;
+}
+.tit_wrap  p {
+  font-size: 24px;
+  color: #ECEFF1;
+  font-weight: 200;
+}
+.tit_wrap  p span {}
+.debut {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.debut iframe {
+  width: 800px;
+  height: 450px;
+}
+
+/* ================== skill Section ================== */
+.Skill_wrap {
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.Skill_wrap input[name=stabmenu] {
+  display: none;
+}
+.Skill_tabs {
+  height: 100%;
+  width: 300%;
+  display: flex;
+  transition: 0.5s;
+}
+.Skill_tab {
+  width: 33.3333%;
+  height: 100%;
+  display: flex;
+}
+.Skill_desc {
+  width: 35%;
+  padding: 40px;
+  position: relative;
+}
+.Skill_desc:before {
+  content: attr(data-text);
+  font-size: 140px;
+  letter-spacing: -0.05em;
+  color: #eee;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+.Skill_desc h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  position: relative;
+}
+.Skill_desc p {
+  color: #555;
+  font-family: 'Noto Sans KR', sans-serif;
+  position: relative;
+}
+.Skill_desc p span {
+  display: block;
+  color: #90A4AE;
+  text-align: right;
+  margin-top: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+}
+.Skill_desc h3 {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.filmography {
+  padding: 0;
+  line-height: 1.6em;
+  font-size: 16px;
+}
+.filmography li {
+}
+.filmography li:before {
+  content: '\e93f';
+  font-family: xeicon;
+}
+.Skill_photo {
+  width: 65%;
+  overflow: hidden;
+}
+.Skill_btn {
+  width: 35%;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  font-size: 16px;
+}
+.Skill_btn label {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.Skill_wrap input[id=stab_01]:checked ~ .Skill_btn label[for=stab_01] {
+  color: #4DB6AC;
+}
+.Skill_wrap input[id=stab_02]:checked ~ .Skill_btn label[for=stab_02] {
+  color: dodgerblue;
+}
+.Skill_wrap input[id=stab_03]:checked ~ .Skill_btn label[for=stab_03] {
+  color: #90A4AE;
+}
+.Skill_wrap input[id=stab_01]:checked ~ .Skill_tabs {
+  margin-left: 0;
+}
+.Skill_wrap input[id=stab_02]:checked ~ .Skill_tabs {
+  margin-left: -100%;
+}
+.Skilll_wrap input[id=stab_03]:checked ~ .Skill_tabs {
+  margin-left: -200%;
+}
+
+/* Slick.js Custom CSS */
+.Skill_photo .slick-arrow {
+  display: none !important;
+}
+.Skill_photo .slick-dots li button {
+  display: none; !important;
+}
+
+/* ================== Award Section ================== */
+.Award_wrap {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/film.jpg) no-repeat center center;
+  background-size : cover;
+}
+.Award_wrap:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+}
+.Award_cont {
+  width: 65%;
+  display: flex;
+  z-index: 10;
+}
+.Award {
+  flex: 1
+}
+.Award h2,
+.Career h2 {
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 900;
+  color: #8D6E63;
+}
+.Award .fa {
+  font-size: 80px;
+  color: #BCAAA4;
+}
+.Award ul li, .Career ul li {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.6em;
+}
+.Career {
+  flex: 1;
+}
+.Career .fa {
+  font-size: 80px;
+  color: #CFD8DC;
+}
+.Career h2 {
+  color: #78909C;
+}
+
+/* ================== Contact Section ================== */
+.contact_wrap {
+  height: 100%;
+  background-color: #F5F5F5;
+}
+.contact_cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.contact_cont > div {
+  float: left;
+  transition: 0.5s;
+}
+.contact_title {
+  margin-right: 40px;
+  animation: ltr;
+}
+.contact_title h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #757575;
+}
+.contact_desc {
+  margin: 20px 0 40px 0;
+}
+.contact_desc p {
+  margin: 0;
+  margin-top: 10px;
+}
+.contact_desc p:before {
+  content: '\ea07';
+  font-family: xeicon;
+  color: #81D4FA;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.sns a {
+  font-size: 20px;
+  color: #fff;
+}
+.insta, .face {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #E4405F;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 6px;
+}
+.face {
+  background-color: #1877F2;
+}
+
+/* scroll reveal */
+.ltr {
+  animation: ltr 0.5s linear both;
+}
+.rtl {
+  animation: rtl 0.5s linear both;
+}
+
+/* keyframes */
+@keyframes ltr {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes rtl {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
